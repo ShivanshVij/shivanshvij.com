@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.a23b7f2ecfb7d4d5e38b6f642e0a3071.js"
+  "/precache-manifest.adb5f8736e06e5b68f383527f12b1a43.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "shivanshvij.com"});
