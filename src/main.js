@@ -3,9 +3,13 @@ import App from './App.vue'
 import router from './router'
 import './registerServiceWorker'
 
-Vue.config.productionTip = false
+import("bulma/css/bulma.css");
+require("particle.js");
+// import("@fortawesome/fontawesome-free/css/all.css")
+
+Vue.config.productionTip = false;
 
 new Vue({
   router,
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');
