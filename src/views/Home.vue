@@ -1,19 +1,32 @@
 <template>
-  <div class="home" id='particles-js'>
-   
-    <!-- <div class="terminal_window">
-      <header>
-        <div class="red_btn button"></div>
-        <div class="green_btn button"></div>
-        <div class="yellow_btn button"></div>
-      </header>
-      <div class="terminal_window">
-        <span id="typed-strings" class="terminal_text">
-          <p>pip install test</p>
-        </span>
-        <span id="typed"></span>
+  <div class="home">
+    <div id='particles-js'></div>
+    <div class="columns is-mobile">
+      <div class="column is-1"></div>
+      <div class="column">
+        <section>
+          <div class="terminal">
+            <div class="terminal-header">
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="terminal-body">
+              <pre class="has-background-dark" style="">
+                <code class="langauge-bash">
+                  # Run Code
+                  $ npm run dev
+                  $ npm run the streets
+                </code>  
+              </pre>    
+            </div>
+          </div>
+        </section>
       </div>
-    </div> -->
+      <div class="column is-1"></div>
+    </div>
   </div>
 </template>
 
@@ -158,6 +171,79 @@ export default {
 .home {
   height: 100%;
   width: 100%;
+}
+
+section {
+  margin-top: 100px;
+}
+
+#particle-js{
+  display: static;
+  z-index: -1;
+}
+
+.terminal {
+  display: block;
+  border-radius: 0.27 rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 45px;
+  width: 100%;
+  margin: 0;
+}
+
+.terminal-header {
+  background: #e2e2e2;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  width: 100%;
+  text-align: left;
+}
+.terminal-header ul, .terminal-header li {
+  display: inline-block;
+}
+.terminal-header ul {
+  margin: 6px 0 6px 0;
+  padding-left: 15px;
+}
+.terminal-header ul li {
+  width: 12px;
+  height: 12px;
+  margin-right: 2px;
+  border-radius: 50%;
+}
+.terminal-header ul li:first-child {
+  background-color: #ff6059;
+  box-shadow: inset 0px 0px 1px #000;
+}
+.terminal-header ul li:nth-child(2) {
+  background-color: #ffbd2e;
+  box-shadow: inset 0px 0px 1px #000;
+}
+.terminal-header ul li:last-child {
+  background-color: #29ca42;
+  box-shadow: inset 0px 0px 1px #000;
+}
+
+.terminal-body {
+  background: #333;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  width: 100%;
+}
+.terminal-body pre {
+  margin: 0 -50px;
+  line-height: 2;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+  color: #f0f0f0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 </style>

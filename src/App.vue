@@ -30,4 +30,9 @@ export default {
   z-index: 0;
 }
 
+body, html { 
+  overflow-x: hidden; 
+  overflow-y: auto;
+}
+
 </style>
