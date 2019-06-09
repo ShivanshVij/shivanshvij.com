@@ -16,11 +16,7 @@
             </div>
             <div class="terminal-body">
               <pre class="has-background-dark">
-                <code class="terminal-code">
-                  # Run Code
-                  $ npm run dev
-                  $ npm run the streets
-                </code>  
+                <p class="terminal-code">$ npm run dev<br>$ npm run the street</p>
               </pre>    
             </div>
           </div>
@@ -242,12 +238,11 @@ export default {
     border-bottom-right-radius: 7px;
     height: 20rem;
     width: 100%;
-
   }
   .terminal-body pre {
-    line-height: 2;
+    line-height: 1.2;
     text-align: left;
-    white-space: pre;
+    white-space: normal;
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
@@ -261,10 +256,12 @@ export default {
     padding: 0;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
+    font-family: "U";
+
   }
 
-  .terminal-code{
-
+  .terminal-code {
+    margin: 0.5rem 0 0 1rem;
   }
 
 </style>
