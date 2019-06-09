@@ -2,9 +2,9 @@
 
   <div class="home">
     <div id='particles-js' class="particle-background"></div>
-    <div class="columns is-mobile" style="z-index: 10000;">
+    <div class="columns is-mobile">
       <div class="column is-1"></div>
-      <div class="column">
+      <div class="column is-10">
         <section>
           <div class="terminal">
             <div class="terminal-header">
@@ -172,8 +172,11 @@ export default {
 <style scoped>
 
   .home {
-    height: auto;
-    width: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: -2;
   }
 
@@ -186,7 +189,7 @@ export default {
     top: 0;
     left: 0;
     right: 0;
-    height: 99%;
+    height: 100%;
     z-index: -1;
   }
 
