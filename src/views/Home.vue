@@ -256,7 +256,7 @@ export default {
     padding: 0;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
-    font-family: "U";
+    font-family: sans-serif;
 
   }
 
