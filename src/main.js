@@ -4,6 +4,7 @@ import router from './router'
 import './registerServiceWorker'
 
 import("bulma/css/bulma.css");
+
 require("particle.js");
 // import("@fortawesome/fontawesome-free/css/all.css")
 
