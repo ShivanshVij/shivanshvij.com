@@ -2,7 +2,7 @@
   <div id="app">
     <router-view/>
     <div class="foot">
-      <p>Footer</p>
+      <p>Made with <i class="fas fa-heart"></i> and <i class="fab fa-vuejs"></i> by <a href="https://github.com/shivanshvij">Shivansh Vij</a></p>
     </div>
   </div>
 </template>
@@ -23,7 +23,7 @@ export default {
     background-color: #090a11;
     position: relative;
     z-index: 0;
-    height: 2400px;
+    height: 2600px;
     /* height: min-content; */
   }
 
@@ -34,37 +34,61 @@ export default {
 
   @media only screen and (max-width: 1100px) {
     #app {
-      height: 2800px;
+      height: 3000px;
     }
   }
 
-  @media only screen and (max-width: 710px) {
+  @media only screen and (max-width: 850px) {
     #app {
-      height: 3000px;
+      height: 3200px;
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    #app {
+      height: 3500px;
     }
   }
 
   @media only screen and (max-width: 639px) {
     #app {
-      height: 2400px;
-    }
-  }
-
-  @media only screen and (max-width: 490px) {
-    #app {
       height: 2700px;
     }
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 530px) {
     #app {
       height: 2900px;
     }
   }
 
-  @media only screen and (max-width: 340px) {
+  @media only screen and (max-width: 475px) {
+    #app {
+      height: 3000px;
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    #app {
+      height: 3100px;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
     #app {
       height: 3200px;
+    }
+  }
+
+  @media only screen and (max-width: 390px) {
+    #app {
+      height: 3300px;
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    #app {
+      height: 3900px;
     }
   }
 
@@ -73,11 +97,11 @@ export default {
   left: 0;
   bottom: 0;
   width: 100%;
-  /* max-height: 20px; */
-  background-color: red;
-  color: white;
+  background-color: white;
+  color: black;
   text-align: center;
   z-index: 100;
+  font-weight: 600;
 }
 
 </style>

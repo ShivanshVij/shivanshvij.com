@@ -2,6 +2,9 @@
 
   <div class="home">
     <div id='particles-js' class="particle-background"></div>
+    <div v-if="loading" class="overlay">
+      <div class="lds-css ng-scope"><div style="width:100%;height:100%" class="lds-pacman"><div><div></div><div></div><div></div></div><div><div></div><div></div></div></div></div>
+    </div>
     <div class="columns is-mobile">
       <div class="column is-1"></div>
       <div class="column is-10">
@@ -126,7 +129,7 @@
           </section>
         </div>
         <div class="arrow">
-          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          <i class="fas fa-chevron-down"></i>
         </div>
       </div>
       <div class="column is-1"></div>
@@ -135,27 +138,27 @@
       <div class="column is-1"></div>
       <div class="column is-2" id="profile">
         <a href="https://github.com/shivanshvij" style="color: inherit">
-          <i class="fa fa-github" aria-hidden="false"></i>
+          <i class="fab fa-github"></i>
         </a>
       </div>
       <div class="column is-2" id="profile">
         <a href="https://www.linkedin.com/in/shivanshvij/" style="color: inherit">
-          <i class="fa fa-linkedin-square" aria-hidden="false"></i>
+          <i class="fab fa-linkedin"></i>
         </a>
       </div>
       <div class="column is-2" id="profile">
         <a href="/shivanshvijresume.pdf" style="color: inherit">
-          <i class="fa fa-file-text" aria-hidden="false"></i>
+          <i class="fas fa-file-contract"></i>
         </a>
       </div>
       <div class="column is-2" id="profile">
         <a href="https://rubygems.org/profiles/ShivanshVij" style="color: inherit">        
-          <i class="fa fa-diamond" aria-hidden="false"></i>
+          <i class="fas fa-gem"></i>
         </a>
       </div>
       <div class="column is-2" id="profile">
         <a href="https://medium.com/@shivanshvij/" style="color: inherit">        
-          <i class="fa fa-medium" aria-hidden="false"></i>
+          <i class="fab fa-medium"></i>
         </a>
       </div>
       <div class="column is-1"></div>
@@ -167,6 +170,7 @@
       <div class="bar bar2" ref="bar2"></div>
     </div>
     <div class="timeline">
+      <h2 class="experience"></h2>
 
       <div class="timeline-item">
         <div class="timeline-icon">
@@ -178,8 +182,12 @@
             <br>
             Jan. 2019&nbsp;&nbsp;-&nbsp;&nbsp;August. 2019
           </p>
-          <p>Currently designing a custom Motor Controller Board utilizing the Controller Area Network (CAN) and I2C Serial Communications Protocols.</p>
-          <p>Learned Altium and LTSpice to test and improve circuitry and increase size efficiency. Worked with the Electrical team to integrate the finished product into a Mars Rover prototype.</p>
+          <p>Managed the entire development lifecycle of a Ruby Library for the operation of Kubernetes or OpenShift clusters from within Ruby Applications - <a href=https://rubygems.org/gems/ruby-kubernetes-controller>Open Sourced and Available on RubyGems</a>.</p>
+          <p>Oversaw the planning and migration of a petabyte of user data from a fixed-size NFS to a dynamically resizable GlusterFS Drive.</p>
+          <p>Built a usage monitoring tool using Python, Ansible, and Terraform to scale the Gluster cluster up or down depending its usage.</p>
+          <p>Leveraged full-stack development experience to design and ship a customizable Gluster events monitoring tool using Vue.js and MongoDB which can be deployed on Kubernetes using Helm - <a href="https://github.com/IBM/gluster-monitoring-dashboard">Open Sourced and Available on Github</a>.</p>
+          <p>Documented an example install process for OpenShift 4 onVMWare vSphere or Bare Metal hardware which was used by 7 other teams at IBM</p>
+          <p>Leveraged Hyperledger Indy as well as C++ and OpenCV to build a platform to trace pharmaceuticals from manufacture to prescription as an initiative to tackle the growing opioid crisis in North America</p>
         </div>
       </div>
 
@@ -250,10 +258,11 @@ export default {
       terminal_input: 'help',
       terminal_history: '',
       prompt: "user@shivanshvij.com: ~/home $",
+      loading: true
     }
   },
   mounted () {
-    require('particles.js')
+    require('particles.js');
     this.$nextTick(() => {
       this.initParticlesJS();
       this.initTyping();
@@ -508,8 +517,13 @@ export default {
       })
       .go();
 
+      new TypeIt('.experience', {speed: 30, cursor: false, waitUntilVisible: true})
+      .type('Work Experience')
+      .go();
+
     },
     initAnime () {
+      var self = this;
       var logoTimeline = anime.timeline();
       var letterDuration = 500;
       var delay = 100;
@@ -660,6 +674,32 @@ export default {
         easing,
         background: '#FF1461'
       })
+
+      var overlayTimeline = anime.timeline({
+        duration: 1500
+      })
+
+      overlayTimeline.add({
+        targets: '.overlay',
+        background: 'rgba(0,0,0,0)',
+        easing
+      }).add({
+        targets: '.lds-pacman',
+        opacity: 0,
+        easing,
+        duration: 1000
+      })
+
+      // var pacmanTimeline = anime.timeline({
+      //   duration: 1500
+      // })
+      // pacmanTimeline
+
+      setTimeout(() => {
+        return self.loading = false;
+      }, 2600)
+
+
     },
     setInputFocus () {
       if(this.input) {
@@ -688,7 +728,11 @@ export default {
         case 'cat shivanshvij.intro':
           this.terminal_input = '';
           this.terminal_history = this.terminal_history + this.prompt + " cat shivanshvij.intro\nHi! My name is Shivansh Vij and I'm currently a second year Computer Engineering student at the University of Waterloo.\n\nI'm also currrently looking for my next co-op so please feel free to reach out at shivansh.vij@uwaterloo.cas!\n\nYou can scroll down to learn more about my background, side projects, and past employment experience.\n\n";
-          break;          
+          break;    
+        case 'cece':
+          this.terminal_input = '';
+          this.terminal_history = this.terminal_history + this.prompt + " cece\nHi babe! I love you!!!\n\n";
+          break;
         default:
           this.terminal_history = this.terminal_history + this.prompt + ' ' + this.terminal_input + '\nUnknown Command\n\n';
       }
@@ -730,7 +774,7 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  height: 66%;
+  height: 3000px;
   z-index: -1;
   background-color: #232741;
 }
@@ -1050,19 +1094,19 @@ svg{
   color: #ffffff;
   text-shadow: 0 0 20px #ffffff;
 }
-#profile .fa-linkedin-square:hover {
+#profile .fa-linkedin:hover {
   z-index: 100001;
   color: #0077B5;
   text-shadow: 0 0 20px #0077B5;
 }
 
-#profile .fa-diamond:hover {
+#profile .fa-gem:hover {
   z-index: 100001;
   color: #E94F64;
   text-shadow: 0 0 20px #E94F64;
 }
 
-#profile .fa-file-text:hover {
+#profile .fa-file-contract:hover {
   background: -webkit-linear-gradient(to top, #5433ff, #20bdff, #a5fecb);
   background: linear-gradient(to top, #5433ff, #20bdff, #a5fecb);
 	-webkit-background-clip: text;
@@ -1120,9 +1164,9 @@ svg{
     height: 37%;
   }
 
-  .particle-experience {
+  /* .particle-experience {
     height: 63%;
-  }
+  } */
 
   .container {
     top: 65%;
@@ -1138,9 +1182,9 @@ svg{
     height: 37%;
   }
 
-  .particle-experience {
+  /* .particle-experience {
     height: 70%;
-  }
+  } */
 
 }
 
@@ -1163,34 +1207,46 @@ svg{
   padding: 0 10px;
   position: absolute;
   transition: all 0.25s ease-in;
-  top: 50%;
+  top: 47%;
   width: 100%;
   z-index: 1200;
 }
 
 @media only screen and (max-width: 1100px) {
   .timeline {
-    top: 45%;
+    top: 41%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .timeline {
+    top: 39%;
   }
 }
 
 @media only screen and (max-width: 850px) {
   .timeline {
-    top: 40%;
+    top: 34%;
   }
 }
 
 @media only screen and (max-width: 750px) {
   .timeline {
-    top: 38%;
+    top: 31%;
   }
 }
 
 @media only screen and (max-width: 639px) {
   .timeline {
-    top: 44%;
+    top: 42%;  
   }
-}
+
+  .experience{
+    padding-bottom: 0px;
+    margin-top: 0px;
+    color: blue;
+  }
+} 
 
 @media only screen and (max-width: 550px) {
   .timeline {
@@ -1198,21 +1254,40 @@ svg{
   }
 }
 
-@media only screen and (max-width: 450px) {
-  .timeline {
-    top: 40%;
-  }
-}
-
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 530px) {
   .timeline {
     top: 38%;
   }
 }
 
-@media only screen and (max-width: 340px) {
+@media only screen and (max-width: 475px) {
+  .timeline {
+    top: 36%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
   .timeline {
     top: 34%;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  .timeline {
+    top: 34%;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .timeline {
+    top: 32%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .timeline {
+    top: 28%;
   }
 }
 
@@ -1332,7 +1407,168 @@ svg{
   }
 }
 
+.experience {
+  font-size: 26pt; 
+  color: white; 
+  font-weight: 700; 
+  margin-top: -90px; 
+  padding-bottom: 90px;
+}
+
+@media only screen and (max-width: 639px) {
+  .experience{
+    padding-bottom: 30px;
+  }
+} 
 
 
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,1);
+  z-index: 100000;
+}
+
+@keyframes lds-pacman-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes lds-pacman-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes lds-pacman-2 {
+  0% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes lds-pacman-2 {
+  0% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+@keyframes lds-pacman-3 {
+  0% {
+    -webkit-transform: translate(190px, 0);
+    transform: translate(190px, 0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(70px, 0);
+    transform: translate(70px, 0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes lds-pacman-3 {
+  0% {
+    -webkit-transform: translate(190px, 0);
+    transform: translate(190px, 0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(70px, 0);
+    transform: translate(70px, 0);
+    opacity: 1;
+  }
+}
+.lds-pacman {
+  position: absolute;
+  top: calc(50vh - 70px);
+  left: calc(50% - 100px);
+  opacity: 1;
+}
+.lds-pacman > div:nth-child(2) div {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 120px;
+  height: 60px;
+  border-radius: 120px 120px 0 0;
+  background: #ffee00;
+  -webkit-animation: lds-pacman-1 0.5s linear infinite;
+  animation: lds-pacman-1 0.5s linear infinite;
+  -webkit-transform-origin: 60px 60px;
+  transform-origin: 60px 60px;
+}
+.lds-pacman > div:nth-child(2) div:nth-child(2) {
+  -webkit-animation: lds-pacman-2 0.5s linear infinite;
+  animation: lds-pacman-2 0.5s linear infinite;
+}
+.lds-pacman > div:nth-child(1) div {
+  position: absolute;
+  top: 92px;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  -webkit-animation: lds-pacman-3 0.5s linear infinite;
+  animation: lds-pacman-3 0.5s linear infinite;
+}
+.lds-pacman > div:nth-child(1) div:nth-child(1) {
+  -webkit-animation-delay: -0.335s;
+  animation-delay: -0.335s;
+}
+.lds-pacman > div:nth-child(1) div:nth-child(2) {
+  -webkit-animation-delay: -0.165s;
+  animation-delay: -0.165s;
+}
+.lds-pacman > div:nth-child(1) div:nth-child(3) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.lds-pacman {
+  width: 200px !important;
+  height: 200px !important;
+  -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+  transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+}
 
 </style>
