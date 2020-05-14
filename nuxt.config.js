@@ -1,11 +1,11 @@
 export default {
   mode: 'spa',
   head: {
-    title: 'Shivansh Vij | Blog',
+    title: 'Shivansh Vij',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Shivansh Vij\'s Personal Blog' }
+      { hid: 'description', name: 'description', content: 'Shivansh Vij\'s Portfolio and Blog' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

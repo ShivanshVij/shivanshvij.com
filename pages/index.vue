@@ -30,9 +30,23 @@
         <div class="border-r h-40"></div>
       </div>
     </div>
+    <div id="sidebars" class="flex md:hidden w-full fixed justify-end left-0 bottom-0 z-0 load-hidden">
+      <div class="reverse-vertical-text font-sans text-base text-gray-600" style="margin-left: 0; margin-bottom: 12rem; margin-right: -26rem">
+        <div class="pb-40">
+          <p>
+            <a href="https://github.com/shivanshvij" class="hover:text-gray-400"><i class="normal-text fab fa-github-square pr-2 text-xl"></i></a>
+            <a href="https://linkedin.com/in/shivanshvij" class="hover:text-gray-400"><i class="normal-text fab fa-linkedin mb-1 pr-2 text-xl"></i></a>
+            <a href="https://twitter.com/confusedqubit" class="hover:text-gray-400"><i class="normal-text fab fa-twitter-square mb-1 pr-2 text-xl"></i></a>
+            <a href="https://rubygems.org/profiles/ShivanshVij" class="hover:text-gray-400"><i class="normal-text fas fa-gem mb-1 pr-2 text-xl"></i></a>
+            <a href="https://medium.com/@shivanshvij/" class="hover:text-gray-400"><i class="normal-text fab fa-medium mb-1 pr-2 text-xl"></i></a>
+            <a href="mailto:shivansh.vij@uwaterloo.ca" class="hover:text-gray-400 pl-1 pr-16">shivansh.vij@uwaterloo.ca</a>
+          </p>
+        </div>
+      </div>
+    </div>
     <transition name="fade">
-      <div id="sidebars" class="fixed flex w-full justify-center left-0 bottom-0 text-white text-2xl z-0 mb-4 load-hidden" :class="{ 'fade': scrolled }">
-        <i class="fas fa-angle-down" :class="{ 'bounce': !scrolled }"></i>
+      <div id="sidebars" class="fixed hidden md:flex w-full justify-center left-0 bottom-0 text-white text-2xl z-0 mb-4 load-hidden" :class="{ 'fade': scrolled }">
+        <i class="fas fa-angle-down relative z-20" :class="{ 'bounce': !scrolled }"></i>
       </div>
     </transition>
     <div class="h-screen w-full" style="min-height: 48rem;">
@@ -66,7 +80,7 @@
       </div>
     </div>
     <div class="h-full w-full">
-      <div class="w-full flex items-center justify-center p-4 mt-64 md:mt-0 mb-16 md:mb-40">
+      <div class="w-full flex items-center justify-center p-4 mb-16 md:mb-40">
         <div class="max-w-screen md:max-w-6xl w-full flex flex-col items-center justify-start text-3xl text-white font-semibold mx-8 sm:mx-16 sm:mx-32 relative z-10">
           <div id="" class="w-full">
             <div class="font-medium text-xl text-logo border-b border-logo ml-24" style="line-height: 0.1em;"><p class="-ml-24">About Me</p></div>
@@ -74,7 +88,7 @@
               <p class="font-normal text-gray-600 text-lg w-full md:pr-8 pb-8 md:pb-0 lg:w-2/3">
                 Well hello there! I'm Shivansh, a computer engineering student who's in his third year at the University of Waterloo.
                 <br><br>
-                I'm passionate about technology and I love solving complex problems. Whether it's figuring out how how to install OpenShift on Bare Metal hardware, desiging 
+                I'm passionate about technology and I love solving complex problems. Whether it's figuring out how to install OpenShift on Bare Metal hardware, desiging 
                 a faster, better Ngrok from the ground up, or just figuring out how to embed firebase authentication in an SPA, I enjoy a good challenge and don't mind
                 picking up some new skills to solve a problem.
                 <br><br>

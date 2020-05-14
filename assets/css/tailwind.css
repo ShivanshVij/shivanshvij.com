@@ -105,6 +105,13 @@
     }
 }
 
+@media (min-width: 767px) {
+    .md\:max-w-1\/2 {
+        max-width: 50%;
+    }
+}
+
+
 .toggle__dot {
     top: -.25rem;
     left: -.25rem;
