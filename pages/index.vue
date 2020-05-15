@@ -86,7 +86,7 @@
             <div class="font-medium text-xl text-logo border-b border-logo ml-24" style="line-height: 0.1em;"><p class="-ml-24">About Me</p></div>
             <div class="w-full flex flex-col md:flex-row items-center justify-center pt-8">
               <p class="font-normal text-gray-600 text-lg w-full md:pr-8 pb-8 md:pb-0 lg:w-2/3">
-                Well hello there! I'm Shivansh, a computer engineering student who's in his third year at the University of Waterloo.
+                Hi! I'm Shivansh, a computer engineering student who's in his third year at the University of Waterloo.
                 <br><br>
                 I'm passionate about technology and I love solving complex problems. Whether it's figuring out how to install OpenShift on Bare Metal hardware, desiging 
                 a faster, better Ngrok from the ground up, or just figuring out how to embed firebase authentication in an SPA, I enjoy a good challenge and don't mind

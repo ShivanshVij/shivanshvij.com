@@ -361,3 +361,12 @@ input:checked ~ .toggle__dot {
         transform: translateY(-15px);
     }
 }
+
+.hidescrollbar {
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+}
+
+.hidescrollbar::-webkit-scrollbar { 
+    display: none;
+}

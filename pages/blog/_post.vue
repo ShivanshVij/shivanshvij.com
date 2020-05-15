@@ -6,7 +6,7 @@
         <div class="p-8 pt-16 flex flex-col items-center justify-center text-center w-full">
           <p class="font-medium text-xl text-logo">{{ post.data.category.toUpperCase() }}</p>
           <p class="p-8 font-medium text-4xl text-gray-100 break-words">{{ post.data.title[0].text }}</p>
-          <p class="p-4 pt-0 font-base text-base text-gray-400">{{ (new Date(post.last_publication_date)).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}</p>
+          <p class="p-4 pt-0 font-base text-base text-gray-400">{{ (new Date(post.first_publication_date)).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}</p>
           <img class="max-w-full" :src="post.data.hero.url">
           <div class="p-8 text-left font-base text-2xl text-gray-100 max-w-full">
             <prismic-rich-text :field="post.data.content"/>
@@ -26,8 +26,6 @@ import PrismicConfig from "~/prismic.config.js";
 import navbar from "~/components/navbar"
 import foot from "~/components/foot"
 
-import hljs from 'highlight.js';
-
 export default {
   components: {
     navbar,
@@ -43,7 +41,6 @@ export default {
     if(!post) {
       redirect(404, "/blog");
     }
-    hljs.initHighlightingOnLoad();
     return { 
       post,
     };

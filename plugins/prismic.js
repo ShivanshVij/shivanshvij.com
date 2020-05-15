@@ -1,6 +1,9 @@
 import Vue from "vue";
+import Prism from 'prismjs'
 import PrismicVue from 'prismic-vue'
 import PrismicDOM from 'prismic-dom'
+
+import 'prismjs/components/prism-bash'
 
 const Elements = PrismicDOM.RichText.Elements;
 
@@ -20,7 +23,7 @@ const htmlSerializer = function (type, element, content, children) {
     }
     // If the image is also a link to a Prismic Document, it will return a <router-link> component
     if (type === Elements.image) {
-      let result = `<img class="rounded-lg max-w-full" src="${element.url}" alt="${element.alt || ''}" copyright="${element.copyright || ''}">`;
+      let result = `<a href="${element.url}"><img class="rounded-lg max-w-full" src="${element.url}" alt="${element.alt || ''}" copyright="${element.copyright || ''}"></a>`;
       if (element.linkTo) {
         const url = PrismicDOM.Link.url(element.linkTo, linkResolver);
         if (element.linkTo.link_type === 'Document') {
@@ -50,7 +53,8 @@ const htmlSerializer = function (type, element, content, children) {
       case Elements.paragraph:
         return `<p font-sans class="p-2 px-1 md:px-4 md:p-4 text-xl font-normal">${children.join('')}</p>`;
       case Elements.preformatted:
-        return `<div class="pb-3 max-w-full overflow-scroll"><pre class="text-base font-light prettyprint max-w-full overflow-scroll"><code class="language-bash max-w-full overflow-scroll">${children.join('\n')}</code></pre></div>`;
+        const isBash = element.text.includes("$");
+        return `<div class="pb-3 max-w-full text-xl"><pre class="max-w-full overflow-scroll hidescrollbar bg-light rounded-lg"><code class="max-w-full">` + Prism.highlight(children.join('').replace(/\<br \/\>/g, '\n'), Prism.languages[isBash ? 'bash' : 'javascript'], isBash ? 'bash' : 'javascript') + `</code></pre></div>`;
       case Elements.strong:
         return `<strong>${children.join('')}</strong>`;
       case Elements.em:

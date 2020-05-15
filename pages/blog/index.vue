@@ -6,11 +6,11 @@
         <div class="flex flex-col">
           <nuxt-link :to="`/blog/${posts.results[0].uid}`" class="hover:bg-middle rounded-lg">
             <div class="flex flex-col md:flex-row items-center justify-center flex-wrap h-auto">
-              <img class="md:flex-1 md:max-w-1/2" :src="posts.results[0].data.hero.url">
+              <img class="md:flex-1 md:max-w-1/2 rounded-lg" :src="posts.results[0].data.hero.url">
               <div class="flex items-start flex-col justify-start md:flex-1 p-8">
                 <div class="flex flex-col sm:flex-row text-gray-300">
                   <p class="font-semibold text-xl text-logo float-left mr-2">{{ posts.results[0].data.category.toUpperCase() }}</p>
-                  <p class="font-base text-lg text-gray-300 float-right mt-px">{{ (new Date(posts.results[0].last_publication_date)).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}</p>
+                  <p class="font-base text-lg text-gray-300 float-right mt-px">{{ (new Date(posts.results[0].first_publication_date)).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}</p>
                 </div>
                 <div class="block">
                   <p class="font-semibold text-3xl text-gray-300">{{ posts.results[0].data.title[0].text }}</p>
@@ -42,10 +42,10 @@
               <nuxt-link :to="`/blog/${post.uid}`" class="w-full">
                 <div class="flex items-start justify-start flex-row w-full rounded-lg">
                   <div class="flex items-start flex-col justify-start p-8">
-                    <img class="flex flex-0" :src="post.data.hero.url">
+                    <img class="flex flex-0 rounded-lg" :src="post.data.hero.url">
                     <div class="pt-4 text-gray-300 w-full">
-                      <p class="font-semibold text-lg text-purple-700 float-left mr-2">{{ post.data.category.toUpperCase() }}</p>
-                      <p class="font-base text-base text-gray-300 float-left lg:float-right mt-px">{{ (new Date(post.last_publication_date)).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}</p>
+                      <p class="font-semibold text-lg text-logo float-left mr-2">{{ post.data.category.toUpperCase() }}</p>
+                      <p class="font-base text-base text-gray-300 float-left lg:float-right mt-px">{{ (new Date(post.first_publication_date)).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}</p>
                     </div>
                     <div class="pt-4 block">
                       <p class="font-semibold text-xl text-gray-300">{{ post.data.title[0].text }}</p>

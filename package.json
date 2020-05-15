@@ -16,6 +16,7 @@
     "@glorious/demo": "^0.11.1",
     "algoliasearch": "^4.1.0",
     "babel-runtime": "^6.26.0",
+    "clipboard": "^2.0.6",
     "highlight.js": "^10.0.3",
     "lodash": "^4.17.15",
     "nuxt": "^2.0.0",
