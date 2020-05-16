@@ -33,7 +33,7 @@ module.exports = {
         light: "#13182A",
         middle: "#0E1627",
         dark: "#0D1321",
-        logo: "#dc6333",
+        logo: "#DC6333",
         lightcontrast: "#F3D05D",
         darkcontrast: "#326A6E"
       },

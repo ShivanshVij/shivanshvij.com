@@ -102,18 +102,20 @@
         </div>
       </div>
     </div>
-    <div id="work" class="h-full w-full font-sans">
+    <div class="h-full w-full font-sans">
       <div class="w-full flex items-center justify-center p-4 mb-16 md:mb-40">
         <div class="max-w-screen md:max-w-6xl w-full flex flex-col items-center justify-start text-3xl text-white font-semibold mx-8 sm:mx-16 sm:mx-32 relative z-10">
           <div class="w-full">
-            <div class="font-medium text-xl text-logo border-b border-logo" style="line-height: 0.1em; margin-left: 11.5rem"><p style="margin-left: -11.5rem">Where I've Worked</p></div>
+            <div id="work" class="font-medium text-xl text-logo border-b border-logo" style="line-height: 0.1em; margin-left: 11.5rem">
+              <p style="margin-left: -11.5rem">Where I've Worked</p>
+            </div>
             <div class="w-full flex flex-col md:flex-row items-center justify-center pt-8">
               <div class="font-normal text-gray-600 text-lg w-full md:pr-8 pb-8 md:pb-0 lg:px-8 lg pt-8">
-                <div class="wrapper relative w-full bg-light border-b border-logo overflow-hidden" style="border-bottom-width: 4px">
+                <div class="wrapper relative w-full bg-light overflow-hidden">
                   <transition-group name="slide" tag="div">
                     <div v-if="experienceTab == -1" key="table" class="absolute w-full transition duration-150 ease-in-out h-full">
                       <ul class="h-full">
-                        <li class="h-1/5 pt-1 border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
+                        <li id="workplace" class="h-1/5 pt-1 border-t border-l border-r border-logo rounded-t-lg" style="border-top-width: 1px; border-left-width: 1px; border-right-width: 1px;">
                           <button disabled class="h-full w-full block hover:bg-dark focus:outline-none focus:bg-dark transition duration-150 ease-in-out">
                             <div class="h-full px-4 py-4 flex items-center sm:px-6">
                               <div class="h-full min-w-0 flex-1 flex items-center justify-between">
@@ -139,7 +141,7 @@
                             </div>
                           </button>
                         </li>
-                        <li class="h-1/5 pt-1 border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
+                        <li id="workplace" class="h-1/5 pt-1 border-t border-l border-r border-logo" style="border-top-width: 1px; border-left-width: 1px; border-right-width: 1px;">
                           <button @click="experienceTab = 1" class="h-full w-full block hover:bg-dark focus:outline-none focus:bg-dark transition duration-150 ease-in-out">
                             <div class="h-full px-4 py-4 flex items-center sm:px-6">
                               <div class="h-full min-w-0 flex-1 flex items-center justify-between">
@@ -165,7 +167,7 @@
                             </div>
                           </button>
                         </li>
-                        <li class="h-1/5 pt-1 border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
+                        <li id="workplace" class="h-1/5 pt-1 border-t border-l border-r border-logo" style="border-top-width: 1px; border-left-width: 1px; border-right-width: 1px;">
                           <button @click="experienceTab = 2" class="h-full w-full block hover:bg-dark focus:outline-none focus:bg-dark transition duration-150 ease-in-out">
                             <div class="h-full px-4 py-4 flex items-center sm:px-6">
                               <div class="h-full min-w-0 flex-1 flex items-center justify-between">
@@ -191,7 +193,7 @@
                             </div>
                           </button>
                         </li>
-                        <li class="h-1/5 pt-1 border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
+                        <li id="workplace" class="h-1/5 pt-1 border-t border-l border-r border-logo" style="border-top-width: 1px; border-left-width: 1px; border-right-width: 1px;">
                           <button @click="experienceTab = 3" class="h-full w-full block hover:bg-dark focus:outline-none focus:bg-dark transition duration-150 ease-in-out">
                             <div class="h-full px-4 py-4 flex items-center sm:px-6">
                               <div class="h-full min-w-0 flex-1 flex items-center justify-between">
@@ -217,7 +219,7 @@
                             </div>
                           </button>
                         </li>
-                        <li class="h-1/5 pt-1 border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
+                        <li id="workplace" class="h-1/5 pt-1 border border-logo rounded-b-lg" style="border-width: 1px;">
                           <button @click="experienceTab = 4" class="h-full w-full block hover:bg-dark focus:outline-none focus:bg-dark transition duration-150 ease-in-out">
                             <div class="h-full px-4 py-4 flex items-center sm:px-6">
                               <div class="h-full min-w-0 flex-1 flex items-center justify-between">
@@ -245,9 +247,9 @@
                         </li>
                       </ul>
                     </div>
-                    <div v-if="experienceTab == 0" key="BanyanMayPresent" class="absolute w-full flex h-full flex-col text-logo transition duration-150 ease-in-out h-full border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
-                      <div class="flex justify-between border-b border-logo" style="border-bottom-width: 4px;">
-                        <button @click="experienceTab = -1" class="text-md border-r border-logo p-4 hover:bg-dark" style="border-right-width: 4px;">
+                    <div v-if="experienceTab == 0" key="BanyanMayPresent" class="absolute w-full flex h-full flex-col text-logo transition duration-150 ease-in-out h-full border rounded-lg border-logo" style="border-width: 1px;">
+                      <div class="flex justify-between border-b border-logo" style="border-bottom-width: 1px;">
+                        <button @click="experienceTab = -1" class="text-md border-r border-logo p-4 rounded-t-lg hover:bg-dark" style="border-right-width: 1px;">
                           <i class="fas fa-angle-left"></i>
                           Back
                         </button>
@@ -269,9 +271,9 @@
                         </ul>
                       </div>
                     </div>
-                    <div v-if="experienceTab == 1" key="IBMJanPresent" class="absolute w-full flex h-full flex-col text-logo transition duration-150 ease-in-out h-full border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
-                      <div class="flex justify-between border-b border-logo" style="border-bottom-width: 4px;">
-                        <button @click="experienceTab = -1" class="text-md border-r border-logo p-4 hover:bg-dark" style="border-right-width: 4px;">
+                    <div v-if="experienceTab == 1" key="IBMJanPresent" class="absolute w-full flex h-full flex-col text-logo transition duration-150 ease-in-out h-full border rounded-lg border-logo" style="border-width: 1px;">
+                      <div class="flex justify-between border-b border-logo" style="border-bottom-width: 1px;">
+                        <button @click="experienceTab = -1" class="text-md border-r border-logo p-4 rounded-t-lg hover:bg-dark" style="border-right-width: 1px;">
                           <i class="fas fa-angle-left"></i>
                           Back
                         </button>
@@ -293,9 +295,9 @@
                         </ul>
                       </div>
                     </div>
-                    <div v-if="experienceTab == 2" key="IBMAprilJan" class="absolute w-full flex h-full flex-col text-logo transition duration-150 ease-in-out h-full border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
-                      <div class="flex justify-between border-b border-logo" style="border-bottom-width: 4px;">
-                        <button @click="experienceTab = -1" class="text-md border-r border-logo p-4 hover:bg-dark" style="border-right-width: 4px;">
+                    <div v-if="experienceTab == 2" key="IBMAprilJan" class="absolute w-full flex h-full flex-col text-logo transition duration-150 ease-in-out h-full border rounded-lg border-logo" style="border-width: 1px;">
+                      <div class="flex justify-between border-b border-logo" style="border-bottom-width: 1px;">
+                        <button @click="experienceTab = -1" class="text-md border-r border-logo p-4 rounded-t-lg hover:bg-dark" style="border-right-width: 1px;">
                           <i class="fas fa-angle-left"></i>
                           Back
                         </button>
@@ -317,9 +319,9 @@
                         </ul>
                       </div>
                     </div>
-                    <div v-if="experienceTab == 3" key="IBMJanApril" class="absolute w-full flex h-full flex-col text-logo transition duration-150 ease-in-out h-full border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
-                      <div class="flex justify-between border-b border-logo" style="border-bottom-width: 4px;">
-                        <button @click="experienceTab = -1" class="text-md border-r border-logo p-4 hover:bg-dark" style="border-right-width: 4px;">
+                    <div v-if="experienceTab == 3" key="IBMJanApril" class="absolute w-full flex h-full flex-col text-logo transition duration-150 ease-in-out h-full border rounded-lg border-logo" style="border-width: 1px;">
+                      <div class="flex justify-between border-b border-logo" style="border-bottom-width: 1px;">
+                        <button @click="experienceTab = -1" class="text-md border-r border-logo p-4 rounded-t-lg hover:bg-dark" style="border-right-width: 1px;">
                           <i class="fas fa-angle-left"></i>
                           Back
                         </button>
@@ -338,9 +340,9 @@
                         </ul>
                       </div>
                     </div>
-                    <div v-if="experienceTab == 4" key="OpenText" class="absolute w-full flex h-full flex-col text-logo transition duration-150 ease-in-out h-full border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
-                      <div class="flex justify-between border-b border-logo" style="border-bottom-width: 4px;">
-                        <button @click="experienceTab = -1" class="text-md border-r border-logo p-4 hover:bg-dark" style="border-right-width: 4px;">
+                    <div v-if="experienceTab == 4" key="OpenText" class="absolute w-full flex h-full flex-col text-logo transition duration-150 ease-in-out h-full border rounded-lg border-logo" style="border-width: 1px;">
+                      <div class="flex justify-between border-b border-logo" style="border-bottom-width: 1px;">
+                        <button @click="experienceTab = -1" class="text-md border-r border-logo p-4 rounded-t-lg hover:bg-dark" style="border-right-width: 1px;">
                           <i class="fas fa-angle-left"></i>
                           Back
                         </button>
@@ -367,30 +369,88 @@
               </div>
             </div>
           </div>
+          <span id="workplace" class="inline-flex rounded-md shadow-lg mt-12">
+            <a href="/shivanshvijresume.pdf">
+              <button type="button" class="inline-flex items-center px-8 py-4 border border-logo text-lg leading-5 font-base rounded-md text-logo hover:underline hover:bg-dark focus:outline-none focus:border-white focus:shadow-outline-white transition ease-in-out duration-150">
+                Check out my Resume
+              </button>
+            </a>
+          </span>
         </div>
       </div>
     </div>
-    <!-- <div class="h-full w-full">
+    <div class="h-full w-full">
       <div class="w-full flex items-center justify-center p-4 mb-16 md:mb-40">
         <div class="max-w-screen md:max-w-6xl w-full flex flex-col items-center justify-start text-3xl text-white font-semibold mx-8 sm:mx-16 sm:mx-32 relative z-10">
           <div class="w-full">
-            <div class="font-medium text-xl text-logo border-b border-logo" style="line-height: 0.1em; margin-left: 10.1rem"><p style="margin-left: -10.1rem">Personal Projects</p></div>
-            <div class="w-full flex flex-col md:flex-row items-center justify-center pt-8">
-              <p class="font-normal text-gray-600 text-lg w-full md:pr-8 pb-8 md:pb-0 lg:w-2/3">
-                Hi! I'm Shivansh, a computer engineering student who's in his third year at the University of Waterloo.
-                <br><br>
-                I'm passionate about technology and I love solving complex problems. Whether it's figuring out how to install OpenShift on Bare Metal hardware, desiging 
-                a faster, better Ngrok from the ground up, or just figuring out how to embed firebase authentication in an SPA, I enjoy a good challenge and don't mind
-                picking up some new skills to solve a problem.
-                <br><br>
-                You can learn more about some of the cool stuff I've been doing recently on my <nuxt-link to="/blog" class="text-blue-400 hover:underline">blog</nuxt-link>.
-              </p>
+            <div id="build" class="font-medium text-xl text-logo border-b border-logo" style="line-height: 0.1em; margin-left: 13rem">
+              <p style="margin-left: -13rem">Some Things I've Built</p>
+            </div>
+            <div class="font-sans text-lg w-full h-full">
+              <div class="container center">
+                <div class="card">
+                  <div class="imgBx">
+                    <a href="https://lynk.sh"><img src="~/assets/images/lynkWebsite.png" class="outline card-outline" alt="Lynk"></a>
+                  </div>
+                  <div class="contentBx">
+                    <div class="content">
+                      <h2>Lynk</h2>
+                      <p class="text-gray-300 text-base font-normal">
+                        Lynk is built on a secure reverse tunneling protocol which allows developers to securely expose their local TCP or HTTP services to the internet. 
+                        By extending the functionality provided by raw TCP sockets and integrating the newest technologies, like HTTP/2, Lynk is able to achieve 6x the performance that other
+                        similar services can.
+                        <br><br>
+                        I started Lynk in December 2019 as a side project, but it has quickly grown to support more than 5000+ users. Since then I've been able to add awesome 
+                        new features like Websocket support, and custom domain names. I built Lynk completely from scratch, the frontend, the backend, and the client application.
+                      </p>
+                      <a class="hover:bg-dark font-light" href="https://lynk.sh">Check out Lynk</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="imgBx">
+                    <a href="https://parasite.sh"><img src="~/assets/images/parasiteWebsite.png" class="outline card-outline" alt="Lynk"></a>
+                  </div>
+                  <div class="contentBx">
+                    <div class="content">
+                      <h2>Parasite</h2>
+                      <p class="text-gray-300 text-base font-normal">
+                        Parasite is an Open Source NPM proxy server which allows you to intercept, record, and replay incoming HTTP and raw TCP traffic.
+                        It also provides an optional web interface and API for managing the incoming requests and replaying them on demand. 
+                        <br><br>
+                        Parasite was initially designed to be a part of Lynk since a big feature that users wanted was request replay - similar to what Ngrok provides. 
+                        However, I quickly realized that Parasite would be much more useful as an open source package so that other users could easily embed it into 
+                        their projects. Today, Parasite can be injected into any Node.js project with just 2 lines of code. 
+                      </p>
+                      <a class="hover:bg-dark font-light" href="https://parasite.sh">Check out Parasite</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="imgBx">
+                    <a href="https://rubygems.org/gems/ruby-kubernetes-controller"><img src="~/assets/images/rubyGemsWebsite.png" class="outline card-outline" alt="Lynk"></a>
+                  </div>
+                  <div class="contentBx">
+                    <div class="content">
+                      <h2>Ruby Kubernetes Controller</h2>
+                      <p class="text-gray-300 text-base font-normal">
+                        Ruby Kubernetes Controller is an open source Ruby Gem which allows users to interact with the core Kubernetes APIs natively from within their Ruby applications. 
+                        <br><br>
+                        This project was concieved during my internship at IBM because we required the ability to patch Ingress controllers from within a Rails application so we could create dynamic routes. 
+                        The issue was, patching ingresses was so new that no existing libraries supported it. Those existing libraries also didn't support OpenShift out of the box, so we decided 
+                        to create our own. This library is currently being used to service 3.5 million learners at companies like Shell, Disney, Redhat, Scotiabank, and RBC.
+                      </p>
+                      <a class="hover:bg-dark font-light" href="https://rubygems.org/gems/ruby-kubernetes-controller">Check it out on RubyGems.org</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div> -->
-    <foot/>
+    </div>
+    <foot class="relative z-20" />
   </div>
 </template>
 
@@ -437,8 +497,11 @@ export default {
     ScrollReveal().reveal('#introtitle', { delay: 300 })
     ScrollReveal().reveal('#introdescription', { delay: 600 })
     ScrollReveal().reveal('#sidebars', { delay: 900 })
-     ScrollReveal().reveal('#about', { delay: 300 })
-      ScrollReveal().reveal('#work', { delay: 300 })
+    ScrollReveal().reveal('#about', { delay: 300 })
+    ScrollReveal().reveal('#work', { delay: 300 })
+    ScrollReveal().reveal('#workplace', { delay: 300 })
+    ScrollReveal().reveal('#built', { delay: 300 })
+    ScrollReveal().reveal('.card', { delay: 300 })
   }
 };
 </script>
@@ -472,11 +535,15 @@ export default {
 }
 
 html.sr .load-hidden {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .outline {
-	box-shadow: 16px 16px 0 -3px #13182A, 16px 16px 0 0 #dc6333;
+  transition: all 0.2s;
+  box-shadow: 16px 16px 0 -1px #13182A, 16px 16px 0 0 #dc6333;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .wrapper {
@@ -503,4 +570,146 @@ html.sr .load-hidden {
   transform: translate(-100%, 0);
 }
 
+.container {
+  position: relative;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 100px 0;
+}
+
+.card:nth-child(odd) {
+  flex-direction: row;
+}
+
+.card:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.card:nth-child(even) .imgBx {
+  left: -25px;
+}
+
+.card .imgBx {
+  position: relative;
+  left: 25px;
+  width: 500px;
+  height: 400px;
+  z-index: 1;
+}
+
+.card .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card .contentBx {
+  position: relative;
+  right: 25px;
+  width: 600px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 60px 20px 100px;
+}
+
+.card:nth-child(even) .contentBx {
+  right: -25px;
+  padding: 20px 100px 20px 60px;
+}
+
+.card .contentBx:before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  border: 1px solid #DC6333;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  z-index: -1;
+}
+
+.card .content h2 {
+  font-size: 1.5em;
+}
+
+.card .content p {
+  margin-top: 10px;
+}
+
+.card .content a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #DC6333;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #DC6333;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 1000px) {
+  .card {
+    flex-direction: column;
+    margin: 25px;
+  }
+  
+  .card .imgBx {
+    width: 400px;
+    height: 300px;
+    left: 0;
+  }
+  
+  .card .contentBx {
+    width: 100%;
+    height: auto;
+    right: 0;
+    padding: 30px;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .card .contentBx:before {
+    top: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  
+  .card:nth-child(even) .imgBx {
+    left: 0;
+  }
+  
+  .card:nth-child(even) .contentBx {
+    right: 0;
+    padding: 30px;
+  }
+
+  .card .imgBx img {
+    margin-top: -2rem;
+  }
+
+  .card-outline {
+    box-shadow: 8px 8px 0 -1px #13182A, 8px 8px 0 0 #dc6333;
+  }
+}
+
+.card-outline:hover {
+  box-shadow: 6px 6px 0 -1px #13182A, 6px 6px 0 0 #dc6333;
+}
 </style>
