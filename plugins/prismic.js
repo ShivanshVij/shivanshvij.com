@@ -17,7 +17,7 @@ const htmlSerializer = function (type, element, content, children) {
         result = `<router-link to="${url}">${content}</router-link>`;
       } else {
         const target = element.data.target ? `target="'${element.data.target}'" rel="noopener"` : '';
-        result = `<a class="font-semibold text-blue-400 hover:underline break-all" href="${url}" ${target}>${content}</a>`;
+        result = `<a class="font-semibold text-blue-400 hover:underline break-words" href="${url}" ${target}>${content}</a>`;
       }
       return result;
     }
@@ -51,7 +51,7 @@ const htmlSerializer = function (type, element, content, children) {
       case Elements.heading6:
         return `<hr class="break text-gray-300">`;
       case Elements.paragraph:
-        return `<p font-sans class="p-2 px-1 md:px-4 md:p-4 text-xl font-normal">${children.join('')}</p>`;
+        return `<p font-sans class="p-2 px-1 md:px-4 md:p-4 text-xl font-normal break-words">${children.join('')}</p>`;
       case Elements.preformatted:
         const isBash = element.text.includes("$");
         return `<div class="pb-3 max-w-full text-xl"><pre class="max-w-full overflow-scroll hidescrollbar bg-light rounded-lg"><code class="max-w-full">` + Prism.highlight(children.join('').replace(/\<br \/\>/g, '\n'), Prism.languages[isBash ? 'bash' : 'javascript'], isBash ? 'bash' : 'javascript') + `</code></pre></div>`;

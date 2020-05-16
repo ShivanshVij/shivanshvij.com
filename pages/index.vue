@@ -79,7 +79,7 @@
         </div>
       </div>
     </div>
-    <div class="h-full w-full">
+    <div id="about" class="h-full w-full">
       <div class="w-full flex items-center justify-center p-4 mb-16 md:mb-40">
         <div class="max-w-screen md:max-w-6xl w-full flex flex-col items-center justify-start text-3xl text-white font-semibold mx-8 sm:mx-16 sm:mx-32 relative z-10">
           <div id="" class="w-full">
@@ -102,6 +102,294 @@
         </div>
       </div>
     </div>
+    <div id="work" class="h-full w-full font-sans">
+      <div class="w-full flex items-center justify-center p-4 mb-16 md:mb-40">
+        <div class="max-w-screen md:max-w-6xl w-full flex flex-col items-center justify-start text-3xl text-white font-semibold mx-8 sm:mx-16 sm:mx-32 relative z-10">
+          <div class="w-full">
+            <div class="font-medium text-xl text-logo border-b border-logo" style="line-height: 0.1em; margin-left: 11.5rem"><p style="margin-left: -11.5rem">Where I've Worked</p></div>
+            <div class="w-full flex flex-col md:flex-row items-center justify-center pt-8">
+              <div class="font-normal text-gray-600 text-lg w-full md:pr-8 pb-8 md:pb-0 lg:px-8 lg pt-8">
+                <div class="wrapper relative w-full bg-light border-b border-logo overflow-hidden" style="border-bottom-width: 4px">
+                  <transition-group name="slide" tag="div">
+                    <div v-if="experienceTab == -1" key="table" class="absolute w-full transition duration-150 ease-in-out h-full">
+                      <ul class="h-full">
+                        <li class="h-1/5 pt-1 border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
+                          <button disabled class="h-full w-full block hover:bg-dark focus:outline-none focus:bg-dark transition duration-150 ease-in-out">
+                            <div class="h-full px-4 py-4 flex items-center sm:px-6">
+                              <div class="h-full min-w-0 flex-1 flex items-center justify-between">
+                                <div class="h-full">
+                                  <div class="h-full text-xl leading-5 font-medium text-logo truncate flex flex-row">
+                                    <p>Banyan Security</p>
+                                    <span class="hidden lg:block ml-1 pb-1 text-lg font-normal text-gray-300">
+                                      - Software Engineering Intern
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="mt-4 text-gray-300  text-sm flex-shrink-0 sm:mt-0">
+                                  <div class="hidden md:block flex overflow-hidden">
+                                    <p>Incoming May 2020</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="ml-5 flex-shrink-0">
+                                <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                  <!-- <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/> -->
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
+                        </li>
+                        <li class="h-1/5 pt-1 border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
+                          <button @click="experienceTab = 1" class="h-full w-full block hover:bg-dark focus:outline-none focus:bg-dark transition duration-150 ease-in-out">
+                            <div class="h-full px-4 py-4 flex items-center sm:px-6">
+                              <div class="h-full min-w-0 flex-1 flex items-center justify-between">
+                                <div class="h-full">
+                                  <div class="h-full text-xl leading-5 font-medium text-logo truncate flex flex-row">
+                                    <p>IBM</p>
+                                    <span class="hidden lg:block ml-1 pb-1 text-lg font-normal text-gray-300">
+                                      - Software Engineering Intern
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="mt-4 text-gray-300  text-sm flex-shrink-0 sm:mt-0">
+                                  <div class="hidden md:block flex overflow-hidden">
+                                    <p>Jan. 2020 - Present</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="ml-5 flex-shrink-0">
+                                <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
+                        </li>
+                        <li class="h-1/5 pt-1 border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
+                          <button @click="experienceTab = 2" class="h-full w-full block hover:bg-dark focus:outline-none focus:bg-dark transition duration-150 ease-in-out">
+                            <div class="h-full px-4 py-4 flex items-center sm:px-6">
+                              <div class="h-full min-w-0 flex-1 flex items-center justify-between">
+                                <div class="h-full">
+                                  <div class="h-full text-xl leading-5 font-medium text-logo truncate flex flex-row">
+                                    <p>IBM</p>
+                                    <span class="hidden lg:block ml-1 pb-1 text-lg font-normal text-gray-300">
+                                      - Site Reliability Engineering Intern
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="mt-4 text-gray-300  text-sm flex-shrink-0 sm:mt-0">
+                                  <div class="hidden md:block flex overflow-hidden">
+                                    <p>April 2019 - Jan. 2020</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="ml-5 flex-shrink-0">
+                                <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
+                        </li>
+                        <li class="h-1/5 pt-1 border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
+                          <button @click="experienceTab = 3" class="h-full w-full block hover:bg-dark focus:outline-none focus:bg-dark transition duration-150 ease-in-out">
+                            <div class="h-full px-4 py-4 flex items-center sm:px-6">
+                              <div class="h-full min-w-0 flex-1 flex items-center justify-between">
+                                <div class="h-full">
+                                  <div class="h-full text-xl leading-5 font-medium text-logo truncate flex flex-row">
+                                    <p>IBM</p>
+                                    <span class="hidden lg:block ml-1 pb-1 text-lg font-normal text-gray-300">
+                                      - DevOps Intern
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="mt-4 text-gray-300  text-sm flex-shrink-0 sm:mt-0">
+                                  <div class="hidden md:block flex overflow-hidden">
+                                    <p>Jan. 2019 - April 2019</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="ml-5 flex-shrink-0">
+                                <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
+                        </li>
+                        <li class="h-1/5 pt-1 border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
+                          <button @click="experienceTab = 4" class="h-full w-full block hover:bg-dark focus:outline-none focus:bg-dark transition duration-150 ease-in-out">
+                            <div class="h-full px-4 py-4 flex items-center sm:px-6">
+                              <div class="h-full min-w-0 flex-1 flex items-center justify-between">
+                                <div class="h-full">
+                                  <div class="h-full text-xl leading-5 font-medium text-logo truncate flex flex-row">
+                                    <p>OpenText</p>
+                                    <span class="hidden lg:block ml-1 pb-1 text-lg font-normal text-gray-300">
+                                      - Software Developer
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="mt-4 text-gray-300  text-sm flex-shrink-0 sm:mt-0">
+                                  <div class="hidden md:block flex overflow-hidden">
+                                    <p>May 2018 - Aug. 2018</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="ml-5 flex-shrink-0">
+                                <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div v-if="experienceTab == 0" key="BanyanMayPresent" class="absolute w-full flex h-full flex-col text-logo transition duration-150 ease-in-out h-full border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
+                      <div class="flex justify-between border-b border-logo" style="border-bottom-width: 4px;">
+                        <button @click="experienceTab = -1" class="text-md border-r border-logo p-4 hover:bg-dark" style="border-right-width: 4px;">
+                          <i class="fas fa-angle-left"></i>
+                          Back
+                        </button>
+                        <p class="font-medium text-normal sm:text-xl md:text-2xl p-4 text-gray-300">
+                          Software Engineering Intern @ <a href="https://banyansecurity.io" class="text-logo hover:underline">Banyan Security</a>
+                        </p>
+                      </div>
+                      <div class="text-gray-300 flex overflow-scroll justify-start items-start px-4 sm:px-8 py-2 sm:py-4 font-base text-base md:text-lg">
+                        <ul class="list-disc px-1 pl-2 pb-4">
+                          <li>
+                            Worked on implementing new features for a Zero-Trust reverse proxy, with a focus on security and ease of use.
+                          </li>
+                          <li>
+                            Implemented the ACME Protocol for use with an internal PKI as well as for issuing certificates with Let's Encrypt.
+                          </li>
+                          <li>
+                            Utilized Go and employed concepts from Kubernetes to add clustering support to the reverse proxy.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div v-if="experienceTab == 1" key="IBMJanPresent" class="absolute w-full flex h-full flex-col text-logo transition duration-150 ease-in-out h-full border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
+                      <div class="flex justify-between border-b border-logo" style="border-bottom-width: 4px;">
+                        <button @click="experienceTab = -1" class="text-md border-r border-logo p-4 hover:bg-dark" style="border-right-width: 4px;">
+                          <i class="fas fa-angle-left"></i>
+                          Back
+                        </button>
+                        <p class="font-medium text-normal sm:text-xl md:text-2xl p-4 text-gray-300">
+                          Software Engineering Intern @ <a href="https://ibm.com" class="text-logo hover:underline">IBM</a>
+                        </p>
+                      </div>
+                      <div class="text-gray-300 flex overflow-scroll justify-start items-start px-4 sm:px-8 py-2 sm:py-4 font-base text-base md:text-lg">
+                        <ul class="list-disc px-1 pl-2 pb-4">
+                          <li>
+                            Designed and shipped a complete browser-based development environment which includes access to an IDE, Kubernetes and OpenShift clusters, and a container registry.
+                          </li>
+                          <li>
+                            Employed TypeScript, Helm, and Redis to create scalable containerized microservices for provisioning and managing user environments in multi-tenant Kubernetes clusters for more than 1.6 million users.
+                          </li>
+                          <li>
+                            Implemented dynamic overprovisioning by employing a custom version of the cluster autoscaler and customized horizontal pod scaling patterns which reduced loading times for user environmentsby 85% and monthly operating costs by 72%.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div v-if="experienceTab == 2" key="IBMAprilJan" class="absolute w-full flex h-full flex-col text-logo transition duration-150 ease-in-out h-full border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
+                      <div class="flex justify-between border-b border-logo" style="border-bottom-width: 4px;">
+                        <button @click="experienceTab = -1" class="text-md border-r border-logo p-4 hover:bg-dark" style="border-right-width: 4px;">
+                          <i class="fas fa-angle-left"></i>
+                          Back
+                        </button>
+                        <p class="font-medium text-normal sm:text-xl md:text-2xl p-4 text-gray-300">
+                          Site Reliability Engineering Intern @ <a href="https://ibm.com" class="text-logo hover:underline">IBM</a>
+                        </p>
+                      </div>
+                      <div class="text-gray-300 flex overflow-scroll justify-start items-start px-4 sm:px-8 py-2 sm:py-4 font-base text-base md:text-lg">
+                        <ul class="list-disc px-1 pl-2 pb-4">
+                          <li>
+                            Orchestrated the redesign and migration of existing Rancher-based tooling to Kubernetes to improve user launch times by 46%, service 300K new users, and reduce operating costs by 15%.
+                          </li>
+                          <li>
+                            Coordinated the entire development lifecycle of an Open Source Ruby Gem for the management of OpenShift and Kubernetes clusters, which is currently being used to service 3.5 million learnersat companies like Shell, Disney, Redhat, Scotiabank, and RBC.
+                          </li>
+                          <li>
+                            Transitioned team to practice Infrastructure as Code by using Helm, Terraform, and Ansible for automatic provisioning, syncing, and testing of our team’s production and staging environments.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div v-if="experienceTab == 3" key="IBMJanApril" class="absolute w-full flex h-full flex-col text-logo transition duration-150 ease-in-out h-full border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
+                      <div class="flex justify-between border-b border-logo" style="border-bottom-width: 4px;">
+                        <button @click="experienceTab = -1" class="text-md border-r border-logo p-4 hover:bg-dark" style="border-right-width: 4px;">
+                          <i class="fas fa-angle-left"></i>
+                          Back
+                        </button>
+                        <p class="font-medium text-normal sm:text-xl md:text-2xl p-4 text-gray-300">
+                          DevOps Intern @ <a href="https://ibm.com" class="text-logo hover:underline">IBM</a>
+                        </p>
+                      </div>
+                      <div class="text-gray-300 flex overflow-scroll justify-start items-start px-4 sm:px-8 py-2 sm:py-4 font-base text-base md:text-lg">
+                        <ul class="list-disc px-1 pl-2 pb-4">
+                          <li>
+                            Researched and developed scalable, fault-tolerant computing and networking infrastructures for production-ready OpenShift clusters on Bare Metal, VMWare vSphere, Digital Ocean, and IBM Cloud.
+                          </li>
+                          <li>
+                            Documented an example install process for OpenShift 4 on VMWare vSphere and Bare Metal, which was used by 7 teams at IBM, Cisco Networks, and the US Armed Forces.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div v-if="experienceTab == 4" key="OpenText" class="absolute w-full flex h-full flex-col text-logo transition duration-150 ease-in-out h-full border-t border-l border-r border-logo" style="border-top-width: 4px; border-left-width: 4px; border-right-width: 4px;">
+                      <div class="flex justify-between border-b border-logo" style="border-bottom-width: 4px;">
+                        <button @click="experienceTab = -1" class="text-md border-r border-logo p-4 hover:bg-dark" style="border-right-width: 4px;">
+                          <i class="fas fa-angle-left"></i>
+                          Back
+                        </button>
+                        <p class="font-medium text-normal sm:text-xl md:text-2xl p-4 text-gray-300">
+                          Software Developer @ <a href="https://www.opentext.com" class="text-logo hover:underline">OpenText</a>
+                        </p>
+                      </div>
+                      <div class="text-gray-300 flex overflow-scroll justify-start items-start px-4 sm:px-8 py-2 sm:py-4 font-base text-base md:text-lg">
+                        <ul class="list-disc px-1 pl-2 pb-4">
+                          <li>
+                            Applied Python, PyWinAuto, and Selenium to develop a custom Automated UI Testing Framework which successfully reduced faulty crashes and saved over 300 Compute-Hours per week.
+                          </li>
+                          <li>
+                           Led the design and implementation of a Predictive AI using Tensorflow and SciKit to understand automated testing crashes and highlight culpable commits which decreased debugging times by 30-40%.
+                          </li>
+                          <li>
+                            Employed Node.js to create a REST API for modifying, training, and using the AI over a web interface.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </transition-group>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="h-full w-full">
+      <div class="w-full flex items-center justify-center p-4 mb-16 md:mb-40">
+        <div class="max-w-screen md:max-w-6xl w-full flex flex-col items-center justify-start text-3xl text-white font-semibold mx-8 sm:mx-16 sm:mx-32 relative z-10">
+          <div class="w-full">
+            <div class="font-medium text-xl text-logo border-b border-logo" style="line-height: 0.1em; margin-left: 10.1rem"><p style="margin-left: -10.1rem">Personal Projects</p></div>
+            <div class="w-full flex flex-col md:flex-row items-center justify-center pt-8">
+              <p class="font-normal text-gray-600 text-lg w-full md:pr-8 pb-8 md:pb-0 lg:w-2/3">
+                Hi! I'm Shivansh, a computer engineering student who's in his third year at the University of Waterloo.
+                <br><br>
+                I'm passionate about technology and I love solving complex problems. Whether it's figuring out how to install OpenShift on Bare Metal hardware, desiging 
+                a faster, better Ngrok from the ground up, or just figuring out how to embed firebase authentication in an SPA, I enjoy a good challenge and don't mind
+                picking up some new skills to solve a problem.
+                <br><br>
+                You can learn more about some of the cool stuff I've been doing recently on my <nuxt-link to="/blog" class="text-blue-400 hover:underline">blog</nuxt-link>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
     <foot/>
   </div>
 </template>
@@ -123,7 +411,8 @@ export default {
   },
   data() {
     return {
-      scrolled: false
+      scrolled: false,
+      experienceTab: -1,
     }
   },
   async asyncData() {
@@ -142,11 +431,14 @@ export default {
     }
   },
   mounted () {
+    
     document.addEventListener('scroll', this.scroll)
     ScrollReveal().reveal('#nav')
     ScrollReveal().reveal('#introtitle', { delay: 300 })
     ScrollReveal().reveal('#introdescription', { delay: 600 })
     ScrollReveal().reveal('#sidebars', { delay: 900 })
+     ScrollReveal().reveal('#about', { delay: 300 })
+      ScrollReveal().reveal('#work', { delay: 300 })
   }
 };
 </script>
@@ -186,4 +478,29 @@ html.sr .load-hidden {
 .outline {
 	box-shadow: 16px 16px 0 -3px #13182A, 16px 16px 0 0 #dc6333;
 }
+
+.wrapper {
+  height: 20rem;
+}
+
+.slider {
+  left: -100%
+}
+
+.wrapper:hover .slider {
+  transition: 1s;
+  left: 0;
+}
+
+.slide-leave-active,
+.slide-enter-active {
+  transition: 1s;
+}
+.slide-enter {
+  transform: translate(100%, 0);
+}
+.slide-leave-to {
+  transform: translate(-100%, 0);
+}
+
 </style>

@@ -16,7 +16,7 @@ export default {
   loading: { color: '#fff' },
   css: [
     '@fortawesome/fontawesome-free/css/all.min.css',
-    'prismjs/themes/prism-okaidia.css'
+    'prismjs/themes/prism-okaidia.css',
   ],
   plugins: [
     { src: '~/plugins/prismic.js', ssr: false }
