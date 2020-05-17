@@ -53,8 +53,8 @@
                 <div v-if="hits.length > 0" class="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg z-20">
                   <div class="rounded-md bg-light border border-gray-200">
                     <div class="py-1">
-                      <a v-for="hit in hits" :key="hit.objectID" @click="cleanSearch()" class="block px-4 py-2 text-sm leading-5 text-gray-400 hover:bg-dark focus:outline-none focus:bg-gray-100 focus:text-gray-900">
-                        <p class="text-base font-semibold truncate sm:break-normal">{{ hit.name }}</p>
+                      <a v-for="hit in hits" :key="hit.objectID" @click="searchClick(hit.uid);" class="block px-4 py-2 text-sm leading-5 text-gray-400 hover:bg-dark focus:outline-none focus:bg-gray-100 focus:text-gray-900">
+                        <p class="text-base font-semibold truncate sm:break-normal">{{ hit.title }}</p>
                         <p class="text-sm font-base truncate">{{ hit.description }}</p>
                       </a>
                     </div>
@@ -96,7 +96,7 @@ export default {
   },
   data() {
     return {
-        searchClient: algoliasearch('7DT2ERS37F','87eeebe61b2a7fd1f144c9a57bad93bd').initIndex('parasite-docs'),
+        searchClient: algoliasearch('5STD24WHPG','1cdaa099558773cc8dce1d088cddf3de').initIndex('blog'),
         query: '',
         hits: [],
         searchLoading: false,
@@ -118,6 +118,9 @@ export default {
       this.search = false;
       this.query = '';
       this.hits = [];
+    },
+    searchClick(uid) {
+      this.$router.push(`/blog/${uid}`);
     },
   },
   created () {
