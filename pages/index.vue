@@ -23,7 +23,7 @@
       </div>
       <div class="mr-8">
         <div class="reverse-vertical-text font-sans text-lg text-gray-600">
-          <a href="mailto@shivansh.vij@uwaterloo.ca" class="hover:text-gray-400 mr-4">
+          <a href="mailto:shivansh.vij@uwaterloo.ca" class="hover:text-gray-400 mr-4">
             <p>shivansh.vij@uwaterloo.ca</p>
           </a>
         </div>
