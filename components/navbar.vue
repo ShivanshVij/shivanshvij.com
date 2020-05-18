@@ -2,14 +2,14 @@
   <nav class="bg-light font-sans">
       <div class="max-w-7xl mx-auto px-2">
         <div class="flex flex-row items-center justify-center h-16">
-          <div v-if="back" class="hidden md:block md:flex-1 float-left p-8">
+          <div v-if="back" class="hidden md:block md:flex-1 float-left pl-8 py-8">
               <nuxt-link to="/blog">
                 <p class="text-gray-500 font-medium text-lg hover:text-gray-300">
                     <i class="fas fa-arrow-left"></i> Back
                 </p>
               </nuxt-link>
             </div>
-          <div v-else class="hidden md:block md:flex-1 float-left p-8">
+          <div v-else class="hidden md:block md:flex-1 float-left pl-8 py-8">
             <nuxt-link to="/">
                 <p class="text-gray-500 font-medium text-lg hover:text-gray-300">
                     <i class="fas fa-arrow-left"></i> Home
@@ -41,7 +41,7 @@
                 </a>
             </button>
           </div>
-          <div v-else class="flex-0 md:flex-1 flex items-center justify-end pl-2 pr-1 ml-4 md:ml-0 w-auto float-right">
+          <div v-else class="flex-0 md:flex-1 flex items-center justify-end pl-20 pr-1 ml-4 md:ml-0 w-auto float-right">
             <div class="max-w-lg w-full lg:max-w-xs" v-on-clickaway="cleanSearch">
               <label for="search" class="sr-only">Search</label>
               <div class="relative">
