@@ -18,7 +18,7 @@
     "babel-runtime": "^6.26.0",
     "clipboard": "^2.0.6",
     "highlight.js": "^10.0.3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "nuxt": "^2.0.0",
     "prismic-dom": "^2.2.3",
     "prismic-javascript": "^2.7.1",
