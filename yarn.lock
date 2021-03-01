@@ -6106,10 +6106,10 @@ prismic-vue@^2.0.1:
   resolved "https://registry.yarnpkg.com/prismic-vue/-/prismic-vue-2.0.1.tgz#c1c7af5df9fd06505b10e3a1e7d41ba06493985a"
   integrity sha512-/bj8VUByc1NlEArl66U1OmyJJFefqatRUQ6m0MbPmfTwBfkuAw2tbCgtzhb96UCEKhRJzGkICJ3UPhyH+kMc2g==
 
-prismjs@^1.20.0, prismjs@^1.6.0:
-  version "1.20.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.20.0.tgz#9b685fc480a3514ee7198eac6a3bf5024319ff03"
-  integrity sha512-AEDjSrVNkynnw6A+B1DsFkd6AVdTnp+/WoUixFRULlCLZVRZlVQMVWio/16jv7G1FscUxQxOQhWwApgbnxr6kQ==
+prismjs@^1.23.0, prismjs@^1.6.0:
+  version "1.23.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.23.0.tgz#d3b3967f7d72440690497652a9d40ff046067f33"
+  integrity sha512-c29LVsqOaLbBHuIbsTxaKENh1N2EQBOHaWv7gkHN4dgRbxSREqDnDbtFJYdpPauS4YCplMSNCABQ6Eeor69bAA==
   optionalDependencies:
     clipboard "^2.0.0"
 
